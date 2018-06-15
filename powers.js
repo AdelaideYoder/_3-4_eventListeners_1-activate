@@ -10,7 +10,7 @@ document.querySelector("#activate-flight").addEventListener("click", handlerFunc
 
 function handlerFunction() {
     const element = document.getElementById("flight");
-    element.className = element.className.replace("disable", "enabled");
+    element.className = element.className.replace("power disabled", "pretty enabled");
     console.log(element)
 }
 
@@ -24,7 +24,7 @@ document.querySelector("#activate-mindreading").addEventListener("click", handle
 
 function handlerFunction1() {
     const element = document.getElementById("mindreading");
-    element.className = element.className.replace("disable", "enabled");
+    element.className = element.className.replace("disabled", "enabled");
     console.log(element)
 }
 
@@ -34,15 +34,25 @@ document.querySelector("#activate-xray").addEventListener("click", handlerFuncti
 
 function handlerFunction2() {
     const element = document.getElementById("xray");
-    element.className = element.className.replace("disable", "enabled");
+    element.className = element.className.replace("disabled", "enabled");
     console.log(element)
 }
 
 handlerFunction2()
-
 
 /*
     Write two more event handlers for activating and deactivating all powers
     when the corresponding buttons are clicked. You will need to use the
     `document.querySelectorAll()` method for these.
 */
+
+document.querySelector("#activate-all").addEventListener("click", handlerFunction3)
+
+function handlerFunction3() {
+    const element = document.querySelectorAll(".power");
+    for(let i = 0; i < element.length; i++)
+    element[i].className = element[i].className.replace("disable", "enabled");
+    console.log(element)
+}
+
+handlerFunction3()
