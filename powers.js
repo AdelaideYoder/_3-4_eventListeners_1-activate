@@ -20,6 +20,25 @@ handlerFunction()
     Now write two more event handlers that activate the other two powers
     when the corresponding buttons are clicked.
 */
+document.querySelector("#activate-mindreading").addEventListener("click", handlerFunction1)
+
+function handlerFunction1() {
+    const element = document.getElementById("mindreading");
+    element.className = element.className.replace("disable", "enabled");
+    console.log(element)
+}
+
+handlerFunction1()
+
+document.querySelector("#activate-xray").addEventListener("click", handlerFunction2)
+
+function handlerFunction2() {
+    const element = document.getElementById("xray");
+    element.className = element.className.replace("disable", "enabled");
+    console.log(element)
+}
+
+handlerFunction2()
 
 
 /*
